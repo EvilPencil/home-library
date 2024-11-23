@@ -73,8 +73,8 @@ $ cd project_git
 $ python3.10 -m virtualenv .venv
 $ source .venv/bin/activate
 $ pip install -U pip
-$ deactivate
 ```
 ##### 6. ( Instal Django )
-
-    $ pip install Django==4.2
+```
+$ pip install Django==4.2
+$ deactivate
