@@ -46,7 +46,16 @@ $ python3.10 -m pip install virtualenv
 ```
 Ok, now we can pull our project from Git repository (or create own), create and activate Python virtual environment:
 
-##### 4. ( Install git )
+##### 4. ( Install MC )
+```
+$ sudo apt install mc
+
+$ vim ~/.profile
+    # alias mc='source /usr/lib/mc/mc-wrapper.sh
+```
+
+
+##### 5. ( Install GIT )
 
 ```
 $ sudo apt install git
@@ -65,11 +74,4 @@ $ source .venv/bin/activate
 $ pip install -U pip
 $ deactivate
 ```
-
-##### 5. MC
-```
-$ sudo apt install mc
-
-$ vim ~/.profile
-    # alias mc='source /usr/lib/mc/mc-wrapper.sh
-```
+##### 6. ( Instal Django )
