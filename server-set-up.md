@@ -76,3 +76,5 @@ $ pip install -U pip
 $ deactivate
 ```
 ##### 6. ( Instal Django )
+
+    $ pip install Django==4.2
