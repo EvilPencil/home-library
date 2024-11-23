@@ -67,9 +67,9 @@ $ deactivate
 ```
 
 ##### 5. MC
-
-    $ sudo apt install mc
+```
+$ sudo apt install mc
 
 $ vim ~/.profile
     # alias mc='source /usr/lib/mc/mc-wrapper.sh
-
+```
