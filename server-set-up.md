@@ -78,3 +78,4 @@ $ pip install -U pip
 ```
 $ pip install Django==4.2
 $ deactivate
+```
