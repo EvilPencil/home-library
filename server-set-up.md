@@ -44,7 +44,7 @@ $ mkdir build ;\
 $ python3.10 -m pip install -U pip
 $ python3.10 -m pip install virtualenv
 ```
-> **Note:** To make the default version of Python 3.12.5, run this:
+> **Note:** To make the default version of Python 3.10.15, run this:
 
     sudo ln -s /usr/local/bin/python3.10 /usr/local/bin/python
 
