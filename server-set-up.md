@@ -3,16 +3,14 @@
 > **Note:** Цифра или знак решетки (#) указывает, что команда необходимо запускать от имени пользователя root, тогда как знак доллара ($) показывает что команду следует запускать от имени обычного пользователя.
 
 
-##### 1. Начальное приготовление
+##### 1. ( Update server )
 ```
 # dpkg-reconfigure tzdata
 # dpkg-reconfigure locales
 # apt update && apt upgrade -y
 # apt install sudo vim curl wget net-tools -y
 ````
-
 ##### 2. (Create user, setup SSH)
-
 ```
 # adduser django
 # adduser django sudo
@@ -53,14 +51,11 @@ Ok, now we can pull our project from Git repository (or create own), create and 
 ```
 $ sudo apt install git
 $ vim ~/.bashrc
+    # Show a current active git branch in the shell prompt
+    export PS1='\t \[\033[01;32m\]\u\[\033[01;34m\] \w\[\033[01;33m\]$(__git_ps1)\[\033[01;34m\] \$\[\033[00m\] '
 
-Вставить в конец файла
-
-# Show a current active git branch in the shell prompt
-export PS1='\t \[\033[01;32m\]\u\[\033[01;34m\] \w\[\033[01;33m\]$(__git_ps1)\[\033[01;34m\] \$\[\033[00m\] '
-
-# Shortcat for the pretty git log. Can be extended with the commit count parameter (last -10, last -35)
-git config --global alias.g 'log --all --decorate --oneline --graph'
+    # Shortcat for the pretty git log. Can be extended with the commit count parameter (last -10, last -35)
+    git config --global alias.g 'log --all --decorate --oneline --graph'
 
 $ cd ~/build
 $ git clone project_git
@@ -75,8 +70,6 @@ $ deactivate
 
     $ sudo apt install mc
 
-Чтоб при выходе из MC оставаться в той же директории 
-добавляем алиас вставить в конец файла ~/.profile
-
+$ vim ~/.profile
     # alias mc='source /usr/lib/mc/mc-wrapper.sh
 
