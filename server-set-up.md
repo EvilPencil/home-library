@@ -1,6 +1,6 @@
 ### Debian 11 “Bullseye” Server Set Up for Django 4.2 LTS
  
-> **Note:** Цифра или знак решетки (#) указывает, что команда необходимо запускать от имени пользователя root, тогда как знак доллара ($) показывает что команду следует запускать от имени обычного пользователя.
+> **Note:** The numeral or hash sign (#) indicates that the command needs to be run as root, whereas the dollar sign ($) shows that the command should be run as a regular user. 
 
 
 ##### 1. ( Update server )
