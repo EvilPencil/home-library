@@ -44,8 +44,6 @@ $ mkdir build ;\
 $ python3.10 -m pip install -U pip
 $ python3.10 -m pip install virtualenv
 ```
-Ok, now we can pull our project from Git repository (or create own), create and activate Python virtual environment:
-
 ##### 4. ( Install MC )
 ```
 $ sudo apt install mc
@@ -53,7 +51,7 @@ $ sudo apt install mc
 $ vim ~/.profile
     # alias mc='source /usr/lib/mc/mc-wrapper.sh
 ```
-
+Ok, now we can pull our project from Git repository (or create own), create and activate Python virtual environment:
 
 ##### 5. ( Install GIT )
 
