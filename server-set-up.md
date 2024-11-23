@@ -1,1 +1,82 @@
+### Debian 11 “Bullseye” Server Set Up for Django 4.2 LTS
+ 
+> **Note:** Цифра или знак решетки (#) указывает, что команда необходимо запускать от имени пользователя root, тогда как знак доллара ($) показывает что команду следует запускать от имени обычного пользователя.
+
+
+##### 1. Начальное приготовление
+```
+# dpkg-reconfigure tzdata
+# dpkg-reconfigure locales
+# apt update && apt upgrade -y
+# apt install sudo vim curl wget net-tools -y
+````
+
+##### 2. (Create user, setup SSH)
+
+```
+# adduser django
+# adduser django sudo
+
+# ssh-copy-id django@ip_server
+
+$ sudo vim /etc/ssh/sshd_config
+
+    PermitRootLogin prohibit-password
+    AllowUsers django
+    PubkeyAuthentication yes
+    PasswordAuthentication no
+
+```
+##### 3. ( Install Python 3.10.15, Update pip, Install virtualenv )
+
+
+    $ sudo apt install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev libsqlite3-dev -y
+
+```
+$ mkdir build ;\
+  cd build ;\
+  wget https://www.python.org/ftp/python/3.10.15/Python-3.10.15.tgz ;\
+  tar xvf Python-3.10.15.tgz ;\
+  cd Python-3.10.15 ;\
+  ./configure --enable-optimizations --prefix=/usr/local ;\
+  make ;\
+  sudo make altinstall
+
+
+$ python3.10 -m pip install -U pip
+$ python3.10 -m pip install virtualenv
+```
+Ok, now we can pull our project from Git repository (or create own), create and activate Python virtual environment:
+
+##### 4. ( Install git )
+
+```
+$ sudo apt install git
+$ vim ~/.bashrc
+
+Вставить в конец файла
+
+# Show a current active git branch in the shell prompt
+export PS1='\t \[\033[01;32m\]\u\[\033[01;34m\] \w\[\033[01;33m\]$(__git_ps1)\[\033[01;34m\] \$\[\033[00m\] '
+
+# Shortcat for the pretty git log. Can be extended with the commit count parameter (last -10, last -35)
+git config --global alias.g 'log --all --decorate --oneline --graph'
+
+$ cd ~/build
+$ git clone project_git
+$ cd project_git
+$ python3.10 -m virtualenv .venv
+$ source .venv/bin/activate
+$ pip install -U pip
+$ deactivate
+```
+
+##### 5. MC
+
+    $ sudo apt install mc
+
+Чтоб при выходе из MC оставаться в той же директории 
+добавляем алиас вставить в конец файла ~/.profile
+
+    # alias mc='source /usr/lib/mc/mc-wrapper.sh
 
