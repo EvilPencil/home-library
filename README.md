@@ -1,4 +1,4 @@
-# Django Home Library
+# Home Library
 
 "Home Library" website written in Django.
 
