@@ -8,6 +8,7 @@
 # dpkg-reconfigure tzdata
 # dpkg-reconfigure locales
 # apt update && apt upgrade -y
+
 # apt install sudo vim curl wget net-tools -y
 ````
 ##### 2. (Create user, setup SSH)
@@ -80,4 +81,5 @@ $ pip install -U pip
 ```
 $ pip install Django==4.2
 $ deactivate
+
 ```
