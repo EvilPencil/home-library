@@ -50,18 +50,17 @@ $ python3.10 -m pip install virtualenv
     sudo ln -s /usr/local/bin/python3.10 /usr/local/bin/python
 
 ##### 4. ( Install MC )
-```
-$ sudo apt install mc
+
+`$ sudo apt install mc`
 
 *Append to* `~/.profile`
     # alias mc='source /usr/lib/mc/mc-wrapper.sh
-```
-Ok, now we can pull our project from Git repository (or create own), create and activate Python virtual environment:
+
+*Ok, now we can pull our project from Git repository (or create own), create and activate Python virtual environment:*
 
 ##### 5. ( Install GIT )
 
-```
-$ sudo apt install git
+`$ sudo apt install git`
 
 *Append to* `~/.bashrc`
     # Show a current active git branch in the shell prompt
@@ -69,7 +68,7 @@ $ sudo apt install git
 
     # Shortcat for the pretty git log. Can be extended with the commit count parameter (git g -10, git g -35)
     git config --global alias.g 'log --all --decorate --oneline --graph'
-
+```
 $ cd ~/build
 $ git clone project_git
 $ cd project_git
