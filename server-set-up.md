@@ -53,6 +53,7 @@ $ python3.10 -m pip install virtualenv
     $ sudo apt install mc
 
 *Append to* `~/.profile`
+
     # alias mc='source /usr/lib/mc/mc-wrapper.sh
 
 *Ok, now we can pull our project from Git repository (or create own), create and activate Python virtual environment:*
@@ -62,6 +63,7 @@ $ python3.10 -m pip install virtualenv
     $ sudo apt install git
 
 *Append to* `~/.bashrc`
+
     # Show a current active git branch in the shell prompt
     export PS1='\t \[\033[01;32m\]\u\[\033[01;34m\] \w\[\033[01;33m\]$(__git_ps1)\[\033[01;34m\] \$\[\033[00m\] '
 
