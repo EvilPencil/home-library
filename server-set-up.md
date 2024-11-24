@@ -17,7 +17,7 @@
 
 # ssh-copy-id django@ip_server
 
-$ sudo vim /etc/ssh/sshd_config
+Append to ``/etc/ssh/sshd_config``
 
     PermitRootLogin prohibit-password
     AllowUsers django
@@ -52,7 +52,7 @@ $ python3.10 -m pip install virtualenv
 ```
 $ sudo apt install mc
 
-$ vim ~/.profile
+Append to ``~/.profile``
     # alias mc='source /usr/lib/mc/mc-wrapper.sh
 ```
 Ok, now we can pull our project from Git repository (or create own), create and activate Python virtual environment:
@@ -62,7 +62,7 @@ Ok, now we can pull our project from Git repository (or create own), create and 
 ```
 $ sudo apt install git
 
-$ vim ~/.bashrc
+Append to ``~/.bashrc``
     # Show a current active git branch in the shell prompt
     export PS1='\t \[\033[01;32m\]\u\[\033[01;34m\] \w\[\033[01;33m\]$(__git_ps1)\[\033[01;34m\] \$\[\033[00m\] '
 
