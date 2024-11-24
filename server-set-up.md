@@ -17,7 +17,7 @@
 # adduser django sudo
 
 # ssh-copy-id django@ip_server
-
+```
 *Append to* `/etc/ssh/sshd_config`
 
     PermitRootLogin prohibit-password
@@ -25,7 +25,7 @@
     PubkeyAuthentication yes
     PasswordAuthentication no
 
-```
+
 ##### 3. ( Install Python 3.10.15, Update pip, Install virtualenv )
 
 
