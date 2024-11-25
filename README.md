@@ -2,6 +2,10 @@
 
 "Home Library" website written in Django.
 
+## Useful links
+
+[The twelve-factor app](https://12factor.net/)
+
 ## Overview
 
 This web application creates an online catalog for a home library, where users can browse available books and manage their accounts.
