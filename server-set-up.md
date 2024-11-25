@@ -54,7 +54,8 @@ $ python3.10 -m pip install virtualenv
 
 *Append to* `~/.profile`
 
-    # alias mc='source /usr/lib/mc/mc-wrapper.sh
+    # In order to stay in the same directory when exiting the program
+    alias mc='source /usr/lib/mc/mc-wrapper.sh
 
 *Ok, now we can pull our project from Git repository (or create own), create and activate Python virtual environment:*
 
