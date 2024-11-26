@@ -31,12 +31,14 @@ SECRET_KEY = os.environ.get(
     'SECRET_KEY', 'django-insecure-f)xiijvv_&2-&&m6$neyzo@th(2pr3o34scgluj@)$uvgl%c4p')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-#DEBUG = True
+# DEBUG = True
+# DEBUG = bool(os.environ.get('DJANGO_DEBUG', True))
+DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
-DEBUG = bool( os.environ.get('DJANGO_DEBUG', True) )
-
+# Set hosts to allow any app on Railway and the local testing URL
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'd3']
 
+# Set CSRF trusted origins to allow any app on Railway and the local testing URL
 CSRF_TRUSTED_ORIGINS = ['http://d3']
 
 # Application definition
@@ -48,7 +50,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # Add your apps
+    # Add our new apps
     #'catalog.apps.CatalogConfig',
 ]
 
@@ -127,9 +129,20 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
-
+# The URL to use when referring to static files (where they will be served from)
 STATIC_URL = 'static/'
+# The absolute path to the directory where collectstatic will collect static files for deployment.
+# STATIC_ROOT = BASE_DIR / 'staticfiles'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# Static file serving. Example.
+# https://whitenoise.readthedocs.io/en/stable/django.html#add-compression-and-caching-support
+#STORAGES = {
+    # ...
+#    "staticfiles": {
+#        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+#    },
+#}
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
