@@ -1,3 +1,5 @@
+# Model field reference  https://docs.djangoproject.com/en/4.2/ref/models/fields/
+
 from django.db import models
 from django.urls import reverse
 import uuid
@@ -61,8 +63,8 @@ class Author(models.Model):
 class User(models.Model):
     first_name = models.CharField(max_length=64)
     last_name = models.CharField(max_length=64)
-    full_name = models.CharField(max_length=128)
-    email_addr = models.CharField(max_length=128)
+    full_name = models.CharField(max_length=128, blank=True)
+    email_addr = models.EmailField(max_length=128, blank=True)
     telephone_number = models.CharField(max_length=32)
 
     def get_absolute_url(self):
