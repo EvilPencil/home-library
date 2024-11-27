@@ -61,8 +61,9 @@ class Author(models.Model):
 class User(models.Model):
     first_name = models.CharField(max_length=64)
     last_name = models.CharField(max_length=64)
-    email_addr = models.CharField(max_length=100)
-    telephone_number = models.CharField(max_length=16)
+    full_name = models.CharField(max_length=128)
+    email_addr = models.CharField(max_length=128)
+    telephone_number = models.CharField(max_length=32)
 
     def get_absolute_url(self):
         return reverse('user-detail', args=[str(self.id)])
