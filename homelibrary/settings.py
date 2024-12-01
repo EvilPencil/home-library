@@ -36,10 +36,10 @@ SECRET_KEY = os.environ.get(
 DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
 # Set hosts to allow any app on Railway and the local testing URL
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'd3']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'homelibrary']
 
 # Set CSRF trusted origins to allow any app on Railway and the local testing URL
-CSRF_TRUSTED_ORIGINS = ['http://d3']
+CSRF_TRUSTED_ORIGINS = ['http://homelibrary']
 
 # Application definition
 
