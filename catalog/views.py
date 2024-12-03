@@ -1,8 +1,17 @@
+#from django.http import HttpResponse
 from django.shortcuts import render
 
 from .models import User, Book, Author, BookInstance, Genre
 
+from django.views import generic
+
 def index(request):
+    return render(request, 'index.html', context={})
+
+class BookListView(generic.ListView):
+    model = Book
+
+def catalog(request):
     num_books=Book.objects.all().count()
     num_instances=BookInstance.objects.all().count()
     num_instances_available=BookInstance.objects.filter(status__exact='a').count()
@@ -11,7 +20,7 @@ def index(request):
 
     return render(
         request,
-        'index.html',
+        'catalog.html',
         context={
             'num_books':num_books,
             'num_instances':num_instances,

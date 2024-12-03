@@ -1,20 +1,12 @@
-{% extends "base_generic.html" %}
-
-{% block content %}
-<h1>Home Library</h1>
-
-  <p>Welcome to HomeLibrary, a very basic Django website.</p>
-
-<h2>Dynamic content</h2>
-
-  <p>The library has the following record counts:</p>
-  <ul>
-    <li><strong>Books:</strong> {{ num_books }}</li>
-    <li><strong>Copies:</strong> {{ num_instances }}</li>
-    <li><strong>Copies available:</strong> {{ num_instances_available }}</li>
-    <li><strong>Authors:</strong> {{ num_authors }}</li>
-    <li><strong>Users:</strong> {{ num_users }}</li>
-  </ul>
-
-{% endblock %}
-
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <title>Welcome to Ext JS 7.0.0</title>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'ext-7.0.0/build/classic/theme-crisp/resources/theme-crisp-all.css' %}" />
+        <script type="text/javascript" src="{% static 'ext-7.0.0/build/ext-all.js' %}"></script>
+        <script type="text/javascript" src="{% static 'library/app.js' %}"></script>
+    </head>
+    <body></body>
+</html>
