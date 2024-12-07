@@ -1,12 +1,52 @@
-<!DOCTYPE HTML>
-<html lang="en-US">
-    <head>
-        <meta charset="UTF-8">
-        <title>Welcome to Ext JS 7.0.0</title>
-        {% load static %}
-        <link rel="stylesheet" type="text/css" href="{% static 'ext-7.0.0/build/classic/theme-crisp/resources/theme-crisp-all.css' %}" />
-        <script type="text/javascript" src="{% static 'ext-7.0.0/build/ext-all.js' %}"></script>
-        <script type="text/javascript" src="{% static 'library/app.js' %}"></script>
-    </head>
-    <body></body>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sencha | Ext JS 7.0</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=10, user-scalable=yes">
+    {% load static %}
+    <link rel="icon" href="{% static 'library/resources/images/favicon.png' %}" type="image/png">
+    <link rel="stylesheet" type="text/css" href="{% static 'library/main.css' %}"/>
+    <!--link rel="stylesheet" type="text/css" href="{% static 'library/resources/css/style.css' %}"/-->
+    <link rel="stylesheet" type="text/css" href="{% static 'ext/classic/theme-crisp/resources/theme-crisp-all-debug.css' %}" />
+    <script type="text/javascript" src="{% static 'ext/ext-all-debug.js' %}"></script>
+    <script type="text/javascript" src="{% static 'library/app.js' %}"></script>
+    <script src="{% static 'library/main.js' %}"></script>
+</head>
+<body>
+    <div id="title">
+        <div class="wrap">
+            <a id="title-logo" href="http://homelibrary"></a>
+            <ul id="title-menu">
+                <li id="title-button"><a href="javascript:void(0);" onclick="toggleMenu()">&#9776;</a></li>
+                <li class="item"><a href="http://homelibrary/admin">Admin</a></li>
+                <li class="item"><a href="http://homelibrary/catalog">Catalog</a></li>
+                <li class="item"><a href="http://homelibrary/catalog/books">books</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="header">
+        <div class="wrap">
+            <div id="header-title">
+                Ext JS Examples
+            </div>
+            <div id="header-image">
+                <img src="{% static 'library/resources/images/favicon.png' %}"/>
+            </div>
+            <div id="header-text">
+                Ext JS
+            </div>
+        </div>
+    </div>
+
+    <div id="body"></div>
+
+    <div id="footer">
+        <div class="wrap">
+            &copy;2024-<span id="this-year"></span> Danilov Andrey. All rights reserved.
+        </div>
+    </div>
+    <script>document.getElementById('this-year').innerHTML = (new Date()).getFullYear();</script>
+</body>
 </html>
