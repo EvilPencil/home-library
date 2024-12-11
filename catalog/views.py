@@ -11,6 +11,10 @@ def index(request):
 class BookListView(generic.ListView):
     model = Book
 
+class BookDetailView(generic.DetailView):
+    model = Book
+    
+
 def catalog(request):
     num_books=Book.objects.all().count()
     num_instances=BookInstance.objects.all().count()
