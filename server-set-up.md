@@ -2,7 +2,6 @@
  
 > **Note:** The numeral or hash sign (#) indicates that the command needs to be run as root, whereas the dollar sign ($) shows that the command should be run as a regular user. 
 
-
 ##### 1. ( Update server )
 ```
 # dpkg-reconfigure tzdata
