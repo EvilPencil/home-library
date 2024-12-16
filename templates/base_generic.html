@@ -10,8 +10,8 @@
 
     <!-- Добавление дополнительного статического CSS файла -->
     {% load static %}
-    <link rel="icon" href="{% static 'img/favicon.ico' %}" >
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />            
+    <link rel="icon" href="{% static 'catalog/img/favicon.ico' %}" >
+    <link rel="stylesheet" href="{% static 'catalog/css/styles.css' %}" />            
   </head>
   <body>
     <div class="container-fluid">
@@ -20,7 +20,7 @@
           {% block sidebar %}
             <ul class="sidebar-nav">
               <li><a href="{% url 'index' %}">Home</a></li>
-              <li><a href="{% url 'catalog' %}">Catalog</a></li>
+              <li><a href="{% url 'catalog' %}">All catalog</a></li>
               <li><a href="{% url 'books' %}">All books</a></li>
               <li><a href="{% url 'authors' %}">All authors</a></li>
               <li><a href="">All users</a></li>
