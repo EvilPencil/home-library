@@ -1,14 +1,17 @@
 #from django.http import HttpResponse
 from django.shortcuts import render
+from django.views import generic
+
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 from .models import User, Book, Author, BookInstance, Genre
 
-from django.views import generic
-
+@login_required
 def index(request):
     return render(request, 'index.html', context={})
 
-class BookListView(generic.ListView):
+class BookListView(LoginRequiredMixin, generic.ListView):
     model = Book
     paginate_by = 2
 
